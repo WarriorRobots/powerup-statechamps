@@ -11,7 +11,6 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2478.robot.subsystems.CameraSubsystem;
-import frc.team2478.robot.subsystems.ClimbSubsystem;
 import frc.team2478.robot.subsystems.DrivetrainSubsystem;
 import frc.team2478.robot.subsystems.FeedSubsystem;
 import frc.team2478.robot.subsystems.PickupSubsystem;
@@ -31,7 +30,6 @@ public class Robot extends TimedRobot {
 	public static final FeedSubsystem feed = new FeedSubsystem();
 	public static final PneumaticSubsystem pneumatics = new PneumaticSubsystem();
 	public static final CameraSubsystem sensors = new CameraSubsystem();
-	public static final ClimbSubsystem climb = new ClimbSubsystem();
 	public static ControlHandler oi;
 	
 	
