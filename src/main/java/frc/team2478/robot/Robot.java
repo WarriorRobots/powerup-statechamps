@@ -16,8 +16,6 @@ import frc.team2478.robot.subsystems.FeedSubsystem;
 import frc.team2478.robot.subsystems.PickupSubsystem;
 import frc.team2478.robot.subsystems.PneumaticSubsystem;
 import frc.team2478.robot.subsystems.ShooterSubsystem;
-import frc.team2478.robot.util.AutonomoSelector;
-import frc.team2478.robot.util.DashboardHandler;
 
 /**
  * Main class of the Robot.
@@ -43,20 +41,7 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void disabledInit() {
-		DashboardHandler.getInstance().init();
 		Scheduler.getInstance().removeAll();
-	}
-	
-	@Override
-	public void autonomousInit() {
-		Scheduler.getInstance().removeAll();
-		AutonomoSelector.getInstance().selectAutoCase();
-		AutonomoSelector.getInstance().startAuto();
-	}
-
-	@Override
-	public void autonomousPeriodic() {
-		Scheduler.getInstance().run();
 	}
 
 	@Override
