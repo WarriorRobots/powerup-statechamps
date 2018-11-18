@@ -49,7 +49,7 @@ public final class ControlHandler {
 	private JoystickButton rightJoyButton3, rightJoyButton4, rightJoyButton7;
 	private ThresholdTrigger leftXboxTrigger, rightXboxTrigger;
 	private JoystickButton leftXboxBumper, rightXboxBumper;
-	private JoystickButton xboxX, xboxY, xboxB, xboxA;
+	private JoystickButton xboxX, xboxY, xboxB, xboxA, xboxStart;
 	private DpadTrigger xboxUp, xboxDown, xboxLeft, xboxRight;
 	
 	public ControlHandler() {
@@ -88,6 +88,7 @@ public final class ControlHandler {
 		xboxB = new JoystickButton(xbox, 2);
 		xboxX = new JoystickButton(xbox, 3);
 		xboxY = new JoystickButton(xbox, 4);
+		xboxStart = new JoystickButton(xbox, 8);
 
 		leftXboxTrigger.whileHeld(new PickupCube());
 		rightXboxTrigger.whileHeld(new ShootSwitch());
@@ -101,6 +102,7 @@ public final class ControlHandler {
 		xboxB.whenPressed(new ClosePickup());
 		xboxX.whenPressed(new LowerHood());
 		xboxY.whenPressed(new RaiseAndClose());
+		xboxStart.whenPressed(new OpenPickup());
 	}
 
 	/**
